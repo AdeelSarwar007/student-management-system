@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Student</title>
+</head>
+<body>
+
+<h1>Search Student</h1>
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Enter Name">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+</tr>
+
+{% for student in students %}
+<tr>
+    <td>{{ student[0] }}</td>
+    <td>{{ student[1] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
